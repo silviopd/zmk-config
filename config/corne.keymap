@@ -116,9 +116,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "adjust";
                         bindings = <
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
@@ -132,9 +132,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another";
                         bindings = <
-        &trans &screenshotM &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-        &shiftBack &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &screenshotM &none &none &none &none      &none &none &none &none &none &trans
+        &shiftBack &none &none &none &none &none      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
@@ -149,9 +149,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another1";
                         bindings = <
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
@@ -166,9 +166,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another2";
                         bindings = <
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
@@ -183,10 +183,10 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another3";
                         bindings = <
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-                                &trans &trans &trans      &trans &trans &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+                    	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
 
@@ -199,9 +199,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another4";
                         bindings = <
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
+        &trans &none &none &none &none &none      &none &none &none &none &none &none
+        &trans &none &none &none &none &none      &none &none &none &none &none &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
                 };
