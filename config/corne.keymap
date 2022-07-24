@@ -42,6 +42,17 @@
                                 , <&macro_release &kp N4>
                                 ;
                 };
+
+                 shiftBack: shiftBack {
+                        label = "shiftBack";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LSHFT>
+                                , <&macro_tap &kp TAB>
+                                , <&macro_release &kp LSHFT>
+                                ;
+                };
         };
 
         keymap {
@@ -52,9 +63,9 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//                    |  GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         label = "default";
-                        bindings = <
+        bindings = <
    &lt another4 ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt another3 BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt another LSHFT
@@ -121,8 +132,8 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "another";
                         bindings = <
-        &screenshotM &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+        &trans &screenshotM &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+        &shiftBack &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
                     	     &trans &trans &trans      &trans &trans &trans
                         >;
