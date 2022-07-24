@@ -16,6 +16,7 @@
 #define another1 5
 #define another2  6
 #define another3  7
+#define another4  8
 
 / {
 
@@ -38,7 +39,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         label = "default";
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt another3 BSPC
+   &lt another4 ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt another3 BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt number ESC
                   &kp LGUI &mo 1 &lt another1 SPACE   &lt another2 RET &mo 2 &kp RALT
@@ -161,6 +162,24 @@
                     	     &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
+
+
+                another3_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        label = "another4";
+                        bindings = <
+   &trans  &kp N9 &kp N0 &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
+                    	     &trans &trans   &trans   &trans   &trans    &trans
+                        >;
+                };
+
+
 
         };
 };
