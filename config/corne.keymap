@@ -13,8 +13,9 @@
 #define upper   2
 #define adjust  3
 #define number  4
-#define another 5
-#define anothe  6
+#define another1 5
+#define another2  6
+#define another3  7
 
 / {
 
@@ -24,28 +25,6 @@
                 if-layers = <lower upper>;
                 then-layer = <adjust>;
             };
-        };
-
-        behaviors {
-                bhm: balanced_homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;
-                        quick-tap-ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                };
-
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick-tap-ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
         };
 
         keymap {
@@ -59,10 +38,10 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         label = "default";
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt another3 BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt number ESC
-                  &kp LGUI &mo 1 &lt another SPACE   &lt anothe RET &mo 2 &kp RALT
+                  &kp LGUI &mo 1 &lt another1 SPACE   &lt another2 RET &mo 2 &kp RALT
                         >;
                 };
 
@@ -134,13 +113,13 @@
 
 
 
-                another_layer {
+                another1_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another";
+                        label = "another1";
                         bindings = <
    &trans  &kp N3 &kp N4 &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -151,15 +130,32 @@
 
 
 
-                anothe_layer {
+                another2_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "anothe";
+                        label = "another2";
                         bindings = <
    &trans  &kp N7 &kp N8 &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
+                    	     &trans &trans   &trans   &trans   &trans    &trans
+                        >;
+                };
+
+
+
+                another3_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        label = "another3";
+                        bindings = <
+   &trans  &kp N9 &kp N0 &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
                     	     &trans &trans   &trans   &trans   &trans    &trans
