@@ -9,22 +9,22 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define default 0
-#define lower   1
-#define upper   2
-#define adjust  3
-#define another  4
-#define another1 5
-#define another2  6
-#define another3  7
-#define another4  8
+#define layerOne   1
+#define layerTwo   2
+#define layerThree  3
+#define layerFour  4
+#define layerFive 5
+#define layerSix  6
+#define layerSeven  7
+#define layerEight  8
 
 / {
 
         conditional_layers {
             compatible = "zmk,conditional-layers";
             config_from_default {
-                if-layers = <lower upper>;
-                then-layer = <adjust>;
+                if-layers = <layerOne layerTwo>;
+                then-layer = <layerThree>;
             };
         };
 
@@ -43,7 +43,7 @@
                                 ;
                 };
 
-                 shiftBack: shiftBack {
+                shiftBack: shiftBack {
                         label = "shiftBack";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
@@ -53,6 +53,167 @@
                                 , <&macro_release &kp LSHFT>
                                 ;
                 };
+
+
+                aTildeMinus: aTildeMinus {
+                        label = "aTildeMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                aTildeMayus: aTildeMayus {
+                        label = "aTildeMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N9>
+                                , <&macro_tap &kp KP_N3>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                eTildeMinus: eTildeMinus {
+                        label = "eTildeMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N3>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                eTildeMayus: eTildeMayus {
+                        label = "eTildeMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N4>
+                                , <&macro_tap &kp KP_N4>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                 iTildeMinus: iTildeMinus {
+                        label = "iTildeMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                iTildeMayus: iTildeMayus {
+                        label = "iTildeMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_tap &kp KP_N2>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_tap &kp KP_N5>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                oTildeMinus: oTildeMinus {
+                        label = "oTildeMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N2>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                oTildeMayus: oTildeMayus {
+                        label = "oTildeMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_tap &kp KP_N2>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                uTildeMinus: uTildeMinus {
+                        label = "uTildeMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N3>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                uTildeMayus: uTildeMayus {
+                        label = "uTildeMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N0>
+                                , <&macro_tap &kp KP_N2>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N7>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                nMinus: nMinus {
+                        label = "nMinus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N4>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
+
+                nMayus: nMayus {
+                        label = "nMayus";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp KP_N1>
+                                , <&macro_tap &kp KP_N6>
+                                , <&macro_tap &kp KP_N5>
+                                , <&macro_release &kp LALT>
+                                ;
+                };
         };
 
         keymap {
@@ -60,33 +221,33 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    |  GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | ESC L8 |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |BKSP L7|
+// |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
+// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
                         label = "default";
         bindings = <
-   &lt another4 ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt another3 BSPC
+   &lt layerEight ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt layerSeven BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt another LSHFT
-                  &kp LGUI &mo 1 &lt another1 SPACE   &lt another2 RET &mo 2 &kp RALT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt layerFour LSHFT
+                  &kp LGUI &mo 1 &lt layerFive SPACE   &lt layerSix RET &mo 2 &kp RALT
                         >;
                 };
 
 
 
-                lower_layer {
+                layerOne_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |VOL U|VOL D|     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "lower";
+// |ESC L8  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 * | 9 ( | 0 ) |BKSP L7|
+//  SHF TAB |     |BRILLO+|BRILLO-|     |     |   | LFT | DWN |  UP | RGT |     |       |
+// | CTRL   |     |VOL +  |VOL -  |MUTE |     |   |     |     |     |     |     |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerOne";
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &trans  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC   &trans   &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans &trans  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp K_MUTE       &kp C_MUTE         &trans   &trans   &trans &trans    &trans &trans
-                          	        &trans     &trans       &trans      &trans  &trans   &trans
+   &trans  &kp N1 &kp N2               &kp N3                &kp N4     &kp N5                 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans  &none  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &none      &none                  &kp LEFT &kp DOWN &kp UP &kp RIGHT &none  &none
+   &trans  &none  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp K_MUTE &none                  &none    &none    &none  &none     &none  &trans
+                        &trans     &trans       &trans                                                      &trans  &trans   &trans
                         >;
                 };
 
@@ -94,115 +255,115 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "upper";
+// | ESC L8 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |BKSP L7|
+// |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
+// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerTwo";
                         bindings = <
-   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
-                    	     &trans &trans   &trans   &trans   &trans    &trans
+   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans  &none   &none &none   &none   &kp KP_DIVIDE                  &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans  &none   &none &none   &none   &none                          &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
+                &trans &trans   &trans                                          &trans   &trans    &trans
                         >;
                 };
 
 
-                adjust_layer {
+                layerThree_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "adjust";
+// | ESC L8 |     |     |     |     |     |   |     |     |     |     |     |BKSP L7|
+// |SHFT TAB| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |       |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerThree";
                         bindings = <
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &none &none &none &none &none &none
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-                    	     &trans &trans &trans      &trans &trans &trans
+        &trans &none &none &none &none &none                                            &none &none &none &none &none &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none &none &none &none &none &none
+        &trans &none &none &none &none &none                                            &none &none &none &none &none &trans
+                    	     &trans &trans &trans                                               &trans &trans &trans
                         >;
                 };
 
 
-                another_layer {
+                layerFour_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another";
+// | ESC L8  |     |     |  é  |     |     |   |     |  ú  |  í  |  ó  |     |BKSP L7|
+// |C Ba TABk|  á  |     |     |     |     |   |     |     |     |     |     |       |
+// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     |SHFT L4|
+//                   |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerFour";
                         bindings = <
-        &trans &screenshotM &none &none &none &none      &none &none &none &none &none &trans
-        &shiftBack &none &none &none &none &none      &none &none &none &none &none &none
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-                    	     &trans &trans &trans      &trans &trans &trans
-                        >;
-                };
-
-
-
-                another1_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another1";
-                        bindings = <
-        &trans &none &none &none &none &none      &kp N7 &kp N8 &kp N9 &kp EQUAL &kp PRCNT &trans
-        &trans &none &none &none &none &none      &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY &kp FSLH &none
-        &trans &none &none &none &none &none      &kp N1 &kp N2 &kp N3 &kp PLUS &kp MINUS &trans
-                    	     &trans &trans &trans      &trans &trans &kp N0
+        &trans &screenshotM &none &eTildeMinus &none &none             &none    &uTildeMinus &iTildeMinus &oTildeMinus &none &trans
+        &shiftBack &aTildeMinus &none &none &none &none                &none    &none &none &none &none &none
+        &trans &none &none &none &none &none                           &nMinus  &none &none &none &none &trans
+                    	     &trans &trans &trans                               &trans &trans &trans
                         >;
                 };
 
 
 
-                another2_layer {
+                layerFive_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another2";
+// | ESC L8 |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  |BKSP L7|
+// |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |  *  |  /  |       |
+// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerFive";
                         bindings = <
-        &trans &none &none &none &none &none      &none &none &kp UP &none &none &trans
-        &trans &none &none &none &none &none      &none &kp LEFT &kp DOWN &kp RIGHT &none &none
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-                    	     &trans &trans &trans      &trans &trans &trans
+        &trans &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &kp EQUAL &kp PRCNT &trans
+        &trans &none &none &none &none &none                    &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY &kp FSLH &none
+        &trans &none &none &none &none &none                    &kp N1 &kp N2 &kp N3 &kp PLUS &kp MINUS &trans
+                    	     &trans &trans &trans                       &trans &trans &kp N0
                         >;
                 };
 
 
 
-                another3_layer {
+                layerSix_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another3";
+// | ESC L8 |     |     |     |     |     |   |     |     |  UP |     |     |BKSP L7|
+// |SHFT TAB|     |     |     |     |     |   |     | LFT | DWN | RGT |     |       |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerSix";
                         bindings = <
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-        &trans &none &none &none &none &none      &none &none &none &none &none &none
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-                    	     &trans &trans &trans      &trans &trans &trans
+        &trans &none &none &none &none &none                    &none &none    &kp UP   &none     &none &trans
+        &trans &none &none &none &none &none                    &none &kp LEFT &kp DOWN &kp RIGHT &none &none
+        &trans &none &none &none &none &none                    &none &none    &none    &none     &none &trans
+                    	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
 
 
-                another4_layer {
+
+                layerSeven_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "another4";
+// | ESC L8 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 |BKSP L7|
+// |SHFT TAB|     |     |     |     |     |   |     |     |     | F11 | F12 |       |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
+//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+                        label = "layerSeven";
                         bindings = <
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-        &trans &none &none &none &none &none      &none &none &none &none &none &none
-        &trans &none &none &none &none &none      &none &none &none &none &none &trans
-                    	     &trans &trans &trans      &trans &trans &trans
+        &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5               &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
+        &trans &none  &none  &none  &none  &none                &none  &none  &none  &kp F11 &kp F12 &none
+        &trans &none  &none  &none  &none  &none                &none  &none  &none  &none   &none   &trans
+                    	     &trans &trans &trans               &trans &trans &trans
+                        >;
+                };
+
+
+                layerEight_layer {
+// -----------------------------------------------------------------------------------------
+// | ESC L8 |     |     |  É  |     |     |   |     |  Ú  |  Í  |  Ó  |     |BKSP L7|
+// |SHFT TAB|  Á  |     |     |     |     |   |     |     |     |     |     |       |
+// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     |SHFT L4|
+//                 | GUI |L1 (L3)|SPC L5|   |ENT L6|L2 (L3)| ALT |
+                        label = "layerEight";
+                        bindings = <
+        &trans &none        &none &eTildeMayus &none &none        &none   &uTildeMayus   &iTildeMayus &oTildeMayus &none &trans
+        &trans &aTildeMayus &none &none        &none &none        &none   &none          &none        &none        &none &none
+        &trans &none        &none &none        &none &none        &nMayus &none          &none        &none        &none &trans
+                    	     &trans &trans &trans                               &trans &trans &trans
                         >;
                 };
 
