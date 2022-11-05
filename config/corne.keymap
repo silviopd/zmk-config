@@ -16,7 +16,6 @@
 #define layerFive 5
 #define layerSix  6
 #define layerSeven  7
-#define layerEight  8
 
 / {
 
@@ -221,13 +220,13 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |BKSP L7|
+// | ESC L7 |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP  |
 // |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
-// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "default";
         bindings = <
-   &lt layerEight ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &lt layerSeven ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt layerFour LSHFT
                   &kp LGUI &mo 1 &lt layerFive SPACE   &lt layerSix RET &mo 2 &kp RALT
@@ -238,10 +237,10 @@
 
                 layerOne_layer {
 // -----------------------------------------------------------------------------------------
-// |ESC L8  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 * | 9 ( | 0 ) |BKSP L7|
+// |ESC L7  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 * | 9 ( | 0 ) | BKSP  |
 //  SHF TAB |     |BRILLO+|BRILLO-|     |     |   | LFT | DWN |  UP | RGT |     |       |
-// | CTRL   |     |VOL +  |VOL -  |MUTE |     |   |     |     |     |     |     |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+// | CTRL   |     |VOL +  |VOL -  |MUTE |     |   |     |     |     |     |     |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerOne";
                         bindings = <
    &trans  &kp N1 &kp N2               &kp N3                &kp N4     &kp N5                 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
@@ -255,10 +254,10 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |BKSP L7|
+// | ESC L7 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP  |
 // |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
-// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerTwo";
                         bindings = <
    &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
@@ -271,10 +270,10 @@
 
                 layerThree_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 |BKSP L7|
+// | ESC L7 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | BKSP  |
 // |SHFT TAB| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     | F11 | F12 |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerThree";
                         bindings = <
         &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                       &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
@@ -287,28 +286,11 @@
 
                 layerFour_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8  |     |     |  é  |     |     |   |     |  ú  |  í  |  ó  |     |BKSP L7|
-// |C Ba TABk|  á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     |SHFT L4|
-//                   |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
-                        label = "layerFour";
-                        bindings = <
-        &trans &screenshotM &none &eTildeMinus &none &none             &none    &uTildeMinus &iTildeMinus &oTildeMinus &none &trans
-        &shiftBack &aTildeMinus &none &none &none &none                &none    &none &none &none &none &none
-        &trans &none &none &none &none &none                           &nMinus  &none &none &none &none &trans
-                    	     &trans &trans &trans                               &trans &trans &trans
-                        >;
-                };
-
-
-
-                layerFive_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC L8 |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  |BKSP L7|
+// | ESC L7 |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  | BKSP  |
 // |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |  *  |  /  |       |
-// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
-                        label = "layerFive";
+// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+                        label = "layerFour";
                         bindings = <
         &trans &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &kp EQUAL &kp PRCNT &trans
         &trans &none &none &none &none &none                    &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY &kp FSLH &none
@@ -319,13 +301,13 @@
 
 
 
-                layerSix_layer {
+                layerFive_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |     |     |     |     |     |   |     |     |  UP |     |     |BKSP L7|
+// | ESC L7 |     |     |     |     |     |   |     |     |  UP |     |     | BKSP  |
 // |SHFT TAB|     |     |     |     |     |   |     | LFT | DWN | RGT |     |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
-                        label = "layerSix";
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+                        label = "layerFive";
                         bindings = <
         &trans &none &none &none &none &none                    &none &none    &kp UP   &none     &none &trans
         &trans &none &none &none &none &none                    &none &kp LEFT &kp DOWN &kp RIGHT &none &none
@@ -333,33 +315,31 @@
                     	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
+                
 
-
-//suspendido todo el layer 7
-
-                layerSeven_layer {
+                layerSix_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 |BKSP L7|
-// |SHFT TAB|     |     |     |     |     |   |     |     |     | F11 | F12 |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
-//                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
-                        label = "layerSeven";
+// | ESC L7  |     |     |  é  |     |     |   |     |  ú  |  í  |  ó  |     | BKSP  |
+// |C Ba TABk|  á  |     |     |     |     |   |     |     |     |     |     |       |
+// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     |SHFT L6|
+//                 |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+                        label = "layerSix";
                         bindings = <
-        &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5               &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
-        &trans &none  &none  &none  &none  &none                &none  &none  &none  &kp F11 &kp F12 &none
-        &trans &none  &none  &none  &none  &none                &none  &none  &none  &none   &none   &trans
-                    	     &trans &trans &trans               &trans &trans &trans
+        &trans &screenshotM &none &eTildeMinus &none &none             &none    &uTildeMinus &iTildeMinus &oTildeMinus &none &trans
+        &shiftBack &aTildeMinus &none &none &none &none                &none    &none &none &none &none &none
+        &trans &none &none &none &none &none                           &nMinus  &none &none &none &none &trans
+                    	     &trans &trans &trans                               &trans &trans &trans
                         >;
                 };
 
 
-                layerEight_layer {
+                layerSeven_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |     |     |  É  |     |     |   |     |  Ú  |  Í  |  Ó  |     |BKSP L7|
+// | ESC L7 |     |     |  É  |     |     |   |     |  Ú  |  Í  |  Ó  |     | BKSP  |
 // |SHFT TAB|  Á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     |SHFT L4|
-//                 | GUI |L1 (L3)|SPC L5|   |ENT L6|L2 (L3)| ALT |
-                        label = "layerEight";
+// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     |SHFT L6|
+//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+                        label = "layerSeven";
                         bindings = <
         &trans &none        &none &eTildeMayus &none &none        &none   &uTildeMayus   &iTildeMayus &oTildeMayus &none &trans
         &trans &aTildeMayus &none &none        &none &none        &none   &none          &none        &none        &none &none
