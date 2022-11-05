@@ -17,7 +17,7 @@
 #define layerSix  6
 #define layerSeven  7
 #define layerEight  8
-
+jj
 / {
 
         conditional_layers {
@@ -227,7 +227,7 @@
 //                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
                         label = "default";
         bindings = <
-   &lt layerEight ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt layerSeven BSPC
+   &lt layerEight ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt layerFour LSHFT
                   &kp LGUI &mo 1 &lt layerFive SPACE   &lt layerSix RET &mo 2 &kp RALT
@@ -271,14 +271,14 @@
 
                 layerThree_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L8 |     |     |     |     |     |   |     |     |     |     |     |BKSP L7|
-// |SHFT TAB| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |       |
+// | ESC L8 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 |BKSP L7|
+// |SHFT TAB| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     | F11 | F12 |       |
 // | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L4|
 //                |  GUI |L1 (L3) |SPC L5 |   |ENT L6|L2 (L3)| ALT |
                         label = "layerThree";
                         bindings = <
-        &trans &none &none &none &none &none                                            &none &none &none &none &none &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none &none &none &none &none &none
+        &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                       &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none &none &none &kp F11 &kp F12 &none
         &trans &none &none &none &none &none                                            &none &none &none &none &none &trans
                     	     &trans &trans &trans                                               &trans &trans &trans
                         >;
@@ -335,6 +335,7 @@
                 };
 
 
+//suspendido todo el layer 7
 
                 layerSeven_layer {
 // -----------------------------------------------------------------------------------------
