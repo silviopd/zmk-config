@@ -17,7 +17,7 @@
 #define layerSix  6
 #define layerSeven  7
 #define layerEight  8
-jj
+
 / {
 
         conditional_layers {
