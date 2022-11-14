@@ -215,6 +215,56 @@
                 };
         };
 
+        behaviors {
+                tildeA: tildeA {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "tildeA";
+                        #binding-cells = <0>;
+                        bindings = <&aTildeMinus>, <&aTildeMayus>;
+                        mods = <MOD_LSFT>;
+                };
+
+                tildeE: tildeE {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "tildeE";
+                        #binding-cells = <0>;
+                        bindings = <&eTildeMinus>, <&eTildeMayus>;
+                        mods = <MOD_LSFT>;
+                };
+
+                tildeI: tildeI {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "tildeI";
+                        #binding-cells = <0>;
+                        bindings = <&iTildeMinus>, <&iTildeMayus>;
+                        mods = <MOD_LSFT>;
+                };
+
+                tildeO: tildeO {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "tildeO";
+                        #binding-cells = <0>;
+                        bindings = <&oTildeMinus>, <&oTildeMayus>;
+                        mods = <MOD_LSFT>;
+                };
+
+                tildeU: tildeU {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "tildeU";
+                        #binding-cells = <0>;
+                        bindings = <&uTildeMinus>, <&uTildeMayus>;
+                        mods = <MOD_LSFT>;
+                };
+
+                specialN: specialN {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "specialN";
+                        #binding-cells = <0>;
+                        bindings = <&nMinus>, <&nMayus>;
+                        mods = <MOD_LSFT>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -222,13 +272,13 @@
 // -----------------------------------------------------------------------------------------
 // | ESC L7 |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP  |
 // |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
-// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |SHFT L6|
+// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "default";
         bindings = <
    &lt layerSeven ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt layerSix LSHFT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LSHFT
                   &kp LGUI &mo 1 &lt layerFour SPACE   &lt layerFive RET &mo 2 &kp RALT
                         >;
                 };
@@ -237,26 +287,26 @@
 
                 layerOne_layer {
 // -----------------------------------------------------------------------------------------
-// |ESC L7  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 * | 9 ( | 0 ) | BKSP  |
-//  SHF TAB |     |BRILLO-|BRILLO+|     |     |   |     | LFT | DWN  | UP | RGT |       |
-// | CTRL   |     |VOL -  |VOL +  |MUTE |     |   |     |     |     |     |     |SHFT L6|
+// |ESC L7  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 *   | 9 (     | 0 ) | BKSP  |
+//  SHF TAB |     |       |       |     |     |   | LFT | DWN | UP    | RGT     |     |       |
+// | CTRL   |     |       |   F5  | F6  |  F8 |   |HOME |END  |PAGE_UP|PAGE_DOWN|     | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerOne";
                         bindings = <
-   &trans  &kp N1 &kp N2               &kp N3                &kp N4     &kp N5                 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans  &none  &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC  &none      &none                  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT  &none
-   &trans  &none  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp K_MUTE &none                  &none    &none    &none  &none     &none  &trans
-                        &trans     &trans       &trans                                                      &trans  &trans   &trans
+   &trans  &kp N1 &kp N2  &kp N3  &kp N4     &kp N5          &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans  &none  &none &none  &none      &none              &kp LEFT &kp DOWN &kp UP &kp RIGHT  &none &none
+   &trans  &none   &none  &kp F5  &kp F6 &kp F8                 &kp HOME &kp END &kp PAGE_UP  &kp PAGE_DOWN     &none  &trans
+   &trans     &trans       &trans                                                      &trans  &trans   &trans
                         >;
                 };
 
 
 
-                raise_layer {
+                layerTwo_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC L7 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP  |
 // |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
-// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |SHFT L6|
+// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerTwo";
                         bindings = <
@@ -270,15 +320,15 @@
 
                 layerThree_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | BKSP  |
-// |SHFT TAB| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     | F11 | F12 |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L6|
+// | ESC L7 |  F1 |  F2 |  F3 |  F4   |  F5   |   |  F6  |  F7 |  F8 |  F9 | F10 | BKSP  |
+// |SHFT TAB| BT1 | BT2 | BT3 | BT4   | BT5   |   |BT_CLR|     |     | F11 | F12 |       |
+// | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerThree";
                         bindings = <
         &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                       &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none &none &none &kp F11 &kp F12 &none
-        &trans &none &none &none &none &none                                            &none &none &none &none &none &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &bt BT_CLR &none &none &kp F11 &kp F12 &none
+        &trans &none &none &none &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC              &kp C_VOLUME_UP &kp C_VOLUME_DOWN &kp K_MUTE &none &none &trans
                     	     &trans &trans &trans                                               &trans &trans &trans
                         >;
                 };
@@ -288,7 +338,7 @@
 // -----------------------------------------------------------------------------------------
 // | ESC L7 |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  | BKSP  |
 // |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |  *  |  /  |       |
-// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  |SHFT L6|
+// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerFour";
                         bindings = <
@@ -303,15 +353,15 @@
 
                 layerFive_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |     |     |     |     |     |   |     |     |  UP |     |     | BKSP  |
-// |SHFT TAB|     |     |     |     |     |   |     | LFT | DWN | RGT |     |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |SHFT L6|
+// | ESC L7 |     |     | é/É |     |     |   |     | ú/Ú | í/Í | ó/Ó |     | BKSP  |
+// |SHFT TAB| á/Á |     |     |     |     |   |     |     |  UP |     |     |       |
+// | CTRL   |     |     |     |     |     |   | ñ/Ñ | LFT | DWN | RGT |     | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerFive";
                         bindings = <
-        &trans &none &none &none &none &none                    &none &none    &kp UP   &none     &none &trans
-        &trans &none &none &none &none &none                    &none &kp LEFT &kp DOWN &kp RIGHT &none &none
-        &trans &none &none &none &none &none                    &none &none    &none    &none     &none &trans
+        &trans &none &none &tildeE &none &none                  &none &tildeU  &tildeI   &tildeO     &none &trans
+        &trans &tildeA &none &none &none &none                  &none &none    &kp UP    &none     &none &none
+        &trans &none &none &none &none &none                    &specialN &kp LEFT &kp DOWN &kp RIGHT &none &trans
                     	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
@@ -321,7 +371,7 @@
 // -----------------------------------------------------------------------------------------
 // | ESC L7  |     |     |  é  |     |     |   |     |  ú  |  í  |  ó  |     | BKSP  |
 // |C Ba TABk|  á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     |SHFT L6|
+// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     | SHIFT |
 //                 |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerSix";
                         bindings = <
@@ -337,7 +387,7 @@
 // -----------------------------------------------------------------------------------------
 // | ESC L7 |     |     |  É  |     |     |   |     |  Ú  |  Í  |  Ó  |     | BKSP  |
 // |SHFT TAB|  Á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     |SHFT L6|
+// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     | SHIFT |
 //                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerSeven";
                         bindings = <
