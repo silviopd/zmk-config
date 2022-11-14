@@ -222,14 +222,16 @@
         };
 
         //Para alternar tecla con un modificador
-        //https://zmk.dev/docs/behaviors/mod-morph
         behaviors {
+                
+                //mod-morph
+                //https://zmk.dev/docs/behaviors/mod-morph
                 tildeA: tildeA {
                         compatible = "zmk,behavior-mod-morph";
                         label = "tildeA";
                         #binding-cells = <0>;
                         bindings = <&aTildeMinus>, <&aTildeMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
                 tildeE: tildeE {
@@ -237,7 +239,7 @@
                         label = "tildeE";
                         #binding-cells = <0>;
                         bindings = <&eTildeMinus>, <&eTildeMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
                 tildeI: tildeI {
@@ -245,7 +247,7 @@
                         label = "tildeI";
                         #binding-cells = <0>;
                         bindings = <&iTildeMinus>, <&iTildeMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
                 tildeO: tildeO {
@@ -253,7 +255,7 @@
                         label = "tildeO";
                         #binding-cells = <0>;
                         bindings = <&oTildeMinus>, <&oTildeMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
                 tildeU: tildeU {
@@ -261,7 +263,7 @@
                         label = "tildeU";
                         #binding-cells = <0>;
                         bindings = <&uTildeMinus>, <&uTildeMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
                 specialN: specialN {
@@ -269,12 +271,15 @@
                         label = "specialN";
                         #binding-cells = <0>;
                         bindings = <&nMinus>, <&nMayus>;
-                        mods = <MOD_LSFT>;
+                        mods = <LSHIFT>;
                 };
 
 
 // -----------------------------------------------------------------------------------------
 
+
+                //tap-dance
+                //https://zmk.dev/docs/behaviors/tap-dance
 
                 tap_dance_mod_tap: tap_dance_mod_tap {
                         compatible = "zmk,behavior-tap-dance";
