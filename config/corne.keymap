@@ -272,29 +272,38 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP  |
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+// CAPA DEFAULT
+// |   ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP  |
 // |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
-// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+// |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+
+                default_layer {
                         label = "default";
-        bindings = <
-   &lt layerSeven ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LSHFT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &lt CAPSLOCK LSHFT
                   &kp LGUI &mo 1 &lt layerFour SPACE   &lt layerFive RET &mo 2 &kp RALT
                         >;
                 };
 
 
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |  ESC   | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 *   | 9 (     | 0 ) | BKSP  |
+//  SHF TAB |     |       |       |     |     |   | LFT | DWN | UP    | RGT     |     |       |
+// | CTRL   |     |       |   F5  | F6  |  F8 |   |HOME |END  |PAGE_UP|PAGE_DOWN|     | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
 
                 layerOne_layer {
-// -----------------------------------------------------------------------------------------
-// |ESC L7  | 1 ! |  2 @  |  3 #  | 4 $ | 5 % |   | 6 ^ | 7 & | 8 *   | 9 (     | 0 ) | BKSP  |
-//  SHF TAB |     |       |       |     |     |   | LFT | DWN | UP    | RGT     |     |       |
-// | CTRL   |     |       |   F5  | F6  |  F8 |   |HOME |END  |PAGE_UP|PAGE_DOWN|     | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerOne";
                         bindings = <
    &trans  &kp N1 &kp N2  &kp N3  &kp N4     &kp N5          &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
@@ -305,13 +314,17 @@
                 };
 
 
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |   ESC  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP  |
+// |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
+// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
 
                 layerTwo_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC L7 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP  |
-// |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
-// | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerTwo";
                         bindings = <
    &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
@@ -322,12 +335,17 @@
                 };
 
 
-                layerThree_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |  F1 |  F2 |  F3 |  F4   |  F5   |   |  F6  |  F7 |  F8 |  F9 | F10 | BKSP  |
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |   ESC  |  F1 |  F2 |  F3 |  F4   |  F5   |   |  F6  |  F7 |  F8 |  F9 | F10 | BKSP  |
 // |SHFT TAB| BT1 | BT2 | BT3 | BT4   | BT5   |   |BT_CLR|     |     | F11 | F12 |       |
-// | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+// | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+
+                layerThree_layer {
                         label = "layerThree";
                         bindings = <
         &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                       &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
@@ -338,12 +356,17 @@
                 };
 
 
-                layerFour_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  | BKSP  |
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |   ESC  |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  | BKSP  |
 // |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |  *  |  /  |       |
-// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | 0 |
+
+                layerFour_layer {
                         label = "layerFour";
                         bindings = <
         &trans &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &kp EQUAL &kp PRCNT &trans
@@ -354,13 +377,17 @@
                 };
 
 
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |   ESC  |     |     | é/É |     |     |   |     | ú/Ú | í/Í | ó/Ó |     | BKSP  |
+// |SHFT TAB| á/Á |     |     |     |     |   |     |     |  UP |     |     |       |
+// | CTRL   |     |     |     |     |     |   | ñ/Ñ | LFT | DWN | RGT |     | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
 
                 layerFive_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC L7 |     |     | é/É |     |     |   |     | ú/Ú | í/Í | ó/Ó |     | BKSP  |
-// |SHFT TAB| á/Á |     |     |     |     |   |     |     |  UP |     |     |       |
-// | CTRL   |     |     |     |     |     |   | ñ/Ñ | LFT | DWN | RGT |     | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
                         label = "layerFive";
                         bindings = <
         &trans &none &none &tildeE &none &none                  &none &tildeU  &tildeI   &tildeO     &none &trans
@@ -371,20 +398,30 @@
                 };
 
 
-                layerSix_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7 |     |     |     |     |     |   |     |     |     |     |     |     | BKSP  |
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+
+// |   ESC  |     |     |     |     |     |   |     |     |     |     |     |     | BKSP  |
 // |SHFT TAB|     |     |     |     |     |   |     |     |     |     |     |     |       |
-// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |     | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4(6) |   |ENT L5(6)|L2 (L3)| ALT |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |     | CAPSLOCK SHIFT |
+//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+
+                layerSix_layer {
                         label = "layerSix";
                         bindings = <
-        &trans &kp A &none &none &none &none                    &none &none &none &none &none  &trans
+        &trans &none &none &none &none &none                    &none &none &none &none &none  &trans
         &trans &none &none &none &none &none                    &none &none &none &none &none  &none
         &trans &none &none &none &none &none                    &none &none &none &none &none &trans
                     	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
+
+
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
 
 
         };
