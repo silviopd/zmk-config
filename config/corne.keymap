@@ -21,9 +21,13 @@
 
         conditional_layers {
             compatible = "zmk,conditional-layers";
-            config_from_default {
+            layerThree {
                 if-layers = <layerOne layerTwo>;
                 then-layer = <layerThree>;
+            };
+            layerSix {
+                if-layers = <layerFour layerFive>;
+                then-layer = <layerSix>;
             };
         };
 
@@ -365,39 +369,22 @@
                     	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
-                
+
 
                 layerSix_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC L7  |     |     |  é  |     |     |   |     |  ú  |  í  |  ó  |     | BKSP  |
-// |C Ba TABk|  á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL    |     |     |     |     |     |   |  ñ  |     |     |     |     | SHIFT |
-//                 |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
+// | ESC L7 |     |     |     |     |     |   |     |     |     |     |     |     | BKSP  |
+// |SHFT TAB|     |     |     |     |     |   |     |     |     |     |     |     |       |
+// | CTRL   |     |     |     |     |     |   |     |     |     |     |     |     | SHIFT |
+//                |  GUI |L1 (L3) |SPC L4(6) |   |ENT L5(6)|L2 (L3)| ALT |
                         label = "layerSix";
                         bindings = <
-        &trans &screenshotM &none &eTildeMinus &none &none             &none    &uTildeMinus &iTildeMinus &oTildeMinus &none &trans
-        &shiftBack &aTildeMinus &none &none &none &none                &none    &none &none &none &none &none
-        &trans &none &none &none &none &none                           &nMinus  &none &none &none &none &trans
-                    	     &trans &trans &trans                               &trans &trans &trans
+        &trans &kp A &none &none &none &none                    &none &none &none &none &none  &trans
+        &trans &none &none &none &none &none                    &none &none &none &none &none  &none
+        &trans &none &none &none &none &none                    &none &none &none &none &none &trans
+                    	     &trans &trans &trans                       &trans &trans &trans
                         >;
                 };
-
-
-                layerSeven_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC L7 |     |     |  É  |     |     |   |     |  Ú  |  Í  |  Ó  |     | BKSP  |
-// |SHFT TAB|  Á  |     |     |     |     |   |     |     |     |     |     |       |
-// | CTRL   |     |     |     |     |     |   |  Ñ  |     |     |     |     | SHIFT |
-//                |  GUI |L1 (L3) |SPC L4 |   |ENT L5|L2 (L3)| ALT |
-                        label = "layerSeven";
-                        bindings = <
-        &trans &none        &none &eTildeMayus &none &none        &none   &uTildeMayus   &iTildeMayus &oTildeMayus &none &trans
-        &trans &aTildeMayus &none &none        &none &none        &none   &none          &none        &none        &none &none
-        &trans &none        &none &none        &none &none        &nMayus &none          &none        &none        &none &trans
-                    	     &trans &trans &trans                               &trans &trans &trans
-                        >;
-                };
-
 
 
         };
