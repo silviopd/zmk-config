@@ -305,21 +305,6 @@
                         bindings = <&kp RALT>, <&kp DEL>;
                 };
 
-                tdCapa14: tdCapa14 {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "tdCapa14";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&mo layerOne>, <&mo layerFour>;
-                };
-
-                tdCapa25: tdCapa25 {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "tdCapa25";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&mo layerTwo>, <&mo layerFive>;
-                };
         };
 
         keymap {
@@ -335,7 +320,7 @@
 // |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
 // |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |CAPSLOCK 
 //                                                                            SHIFT CTRL|
-//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 default_layer {
                         label = "default";
@@ -343,7 +328,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tdCtrlCapsLock
-                  &tdWindowsAltCtrl &tdCapa14 &kp SPACE   &kp RET &tdCapa25 &tdAltDel
+        &tdWindowsAltCtrl &mo layerOne  &lt layerFour SPACE   &lt layerFive RET &mo layerTwo &tdAltDel
                         >;
                 };
 
@@ -358,7 +343,7 @@
 //  SHF TAB |     |       |       |     |     |   | LFT | DWN | UP    | RGT     |     |       |
 // | CTRL   |     |       |   F5  | F6  |  F8 |   |HOME |END  |PAGE_UP|PAGE_DOWN|     |CAPSLOCK 
 //                                                                                    SHIFT CTRL|
-//            | GUI | L1(L3)  / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 layerOne_layer {
                         label = "layerOne";
@@ -381,7 +366,7 @@
 // |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
 // | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |CAPSLOCK 
 //                                                                          SHIFT CTRL|
-//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 layerTwo_layer {
                         label = "layerTwo";
@@ -404,7 +389,7 @@
 // |SHFT TAB| BT1 | BT2 | BT3 | BT4   | BT5   |   |BT_CLR|     |     | F11 | F12 |       |
 // | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     |CAPSLOCK 
 //                                                                               SHIFT CTRL|
-//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 layerThree_layer {
                         label = "layerThree";
@@ -450,7 +435,7 @@
 // |SHFT TAB| á/Á |     |     |     |     |   |     |     |  UP |     |     |       |
 // | CTRL   |     |     |     |     |     |   | ñ/Ñ | LFT | DWN | RGT |     |CAPSLOCK 
 //                                                                          SHIFT CTRL|
-//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 layerFive_layer {
                         label = "layerFive";
@@ -473,7 +458,7 @@
 // |SHFT TAB|     |     |     |     |     |   |     |     |     |     |     |     |       |
 // | CTRL   |     |     |     |     |     |   |     |     |     |     |     |     |CAPSLOCK 
 //                                                                                SHIFT CTRL|
-//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
+//            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
                 layerSix_layer {
                         label = "layerSix";
