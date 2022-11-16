@@ -327,7 +327,7 @@
 // |SHFT TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; : |  ' "  |
 // |  CTRL  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | , < | . > | / ? |CAPSLOCK 
 //                                                                            SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 default_layer {
                         label = "default";
@@ -350,7 +350,7 @@
 //  SHF TAB |     |       |       |     |     |   | LFT | DWN | UP    | RGT     |     |       |
 // | CTRL   |     |       |   F5  | F6  |  F8 |   |HOME |END  |PAGE_UP|PAGE_DOWN|     |CAPSLOCK 
 //                                                                                    SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3)  / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 layerOne_layer {
                         label = "layerOne";
@@ -373,7 +373,7 @@
 // |SHFT TAB|     |     |     |     |  /  |   |  -  |  =  |  [  |  ]  |  \  |   `   |
 // | CTRL   |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |CAPSLOCK 
 //                                                                          SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 layerTwo_layer {
                         label = "layerTwo";
@@ -396,7 +396,7 @@
 // |SHFT TAB| BT1 | BT2 | BT3 | BT4   | BT5   |   |BT_CLR|     |     | F11 | F12 |       |
 // | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     |CAPSLOCK 
 //                                                                               SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 layerThree_layer {
                         label = "layerThree";
@@ -415,18 +415,18 @@
 
 
 // CAPA 4
-// |   ESC  |     |     |     |     |     |   |  7  |  8  |  9  |  =  |  %  | BKSP  |
-// |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |  *  |  /  |       |
-// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |  +  |  -  |CAPSLOCK 
+// |   ESC  |     |     |     |     |     |   |  7  |  8  |  9  |     |     | BKSP  |
+// |SHFT TAB|     |     |     |     |     |   |  4  |  5  |  6  |     |     |       |
+// | CTRL   |     |     |     |     |     |   |  1  |  2  |  3  |     |     |CAPSLOCK 
 //                                                                          SHIFT CTRL|
 //            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | 0 |
 
                 layerFour_layer {
                         label = "layerFour";
                         bindings = <
-        &trans &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &kp EQUAL &kp PRCNT &trans
-        &trans &none &none &none &none &none                    &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY &kp FSLH &none
-        &trans &none &none &none &none &none                    &kp N1 &kp N2 &kp N3 &kp PLUS &kp MINUS &trans
+        &trans &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &none &none &trans
+        &trans &none &none &none &none &none                    &kp N4 &kp N5 &kp N6 &none &none &none
+        &trans &none &none &none &none &none                    &kp N1 &kp N2 &kp N3 &none &none &trans
                     	     &trans &trans &trans                       &trans &trans &kp N0
                         >;
                 };
@@ -442,7 +442,7 @@
 // |SHFT TAB| á/Á |     |     |     |     |   |     |     |  UP |     |     |       |
 // | CTRL   |     |     |     |     |     |   | ñ/Ñ | LFT | DWN | RGT |     |CAPSLOCK 
 //                                                                          SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 layerFive_layer {
                         label = "layerFive";
@@ -465,7 +465,7 @@
 // |SHFT TAB|     |     |     |     |     |   |     |     |     |     |     |     |       |
 // | CTRL   |     |     |     |     |     |   |     |     |     |     |     |     |CAPSLOCK 
 //                                                                                SHIFT CTRL|
-//            | GUI | L1 (L3) | SPC L4(6) |   | ENT L5(6) | L2 (L3) | ALT |
+//            | GUI | L1(L3) / L4(L6) | SPC |   | ENT | L2(L3) / L5(L6) | ALT |
 
                 layerSix_layer {
                         label = "layerSix";
