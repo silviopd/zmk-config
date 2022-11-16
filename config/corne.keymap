@@ -281,12 +281,36 @@
                 //tap-dance
                 //https://zmk.dev/docs/behaviors/tap-dance
 
-                tap_dance_mod_tap: tap_dance_mod_tap {
+                tdCtrlCapsLock: tdCtrlCapsLock {
                         compatible = "zmk,behavior-tap-dance";
-                        label = "tap_dance_mod_tap";
+                        label = "tdCtrlCapsLock";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+                };
+
+                tdWindowsAlt: tdWindowsAlt {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "tdWindowsAlt";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp LGUI>, <&kp LALT>;
+                };
+
+                tdCapa14: tdCapa14 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "tdCapa14";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&mo layerOne>, <&mo layerFour>;
+                };
+
+                tdCapa25: tdCapa25 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "tdCapa25";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&mo layerThree>, <&mo layerFive>;
                 };
         };
 
@@ -310,8 +334,8 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LSHFT TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tap_dance_mod_tap
-                  &kp LGUI &mo 1 &lt layerFour SPACE   &lt layerFive RET &mo 2 &kp RALT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tdCtrlCapsLock
+                  &tdWindowsAlt &tdCapa14 &kp SPACE   &kp RET &tdCapa25 &kp RALT
                         >;
                 };
 
