@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define default 0
 #define layerOne   1
@@ -387,7 +388,7 @@
 // CAPA 3
 // |   ESC  |  F1 |  F2 |  F3 |  F4   |  F5   |   |  F6  |  F7 |  F8 |  F9 | F10 | BKSP  |
 // |SHFT TAB| BT1 | BT2 | BT3 | BT4   | BT5   |   |BT_CLR|     |     | F11 | F12 |       |
-// | CTRL   |     |     |     |BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     |CAPSLOCK 
+// | CTRL   |OUT_TOG|OUT_BLE|OUT_USB|BRILLO-|BRILLO+|   |VOL - |VOL +|MUTE |     |     |CAPSLOCK 
 //                                                                               SHIFT CTRL|
 //            | GUI | L1(L3) | L4(L6) SPC |   | ENT L5(L6) | L2(L3) | ALT |
 
@@ -396,7 +397,7 @@
                         bindings = <
         &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                       &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &trans
         &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &bt BT_CLR &none &none &kp F11 &kp F12 &none
-        &trans &none &none &none &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC              &kp C_VOLUME_UP &kp C_VOLUME_DOWN &kp K_MUTE &none &none &trans
+        &trans &out OUT_TOG &out OUT_BLE &out OUT_USB &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC              &kp C_VOLUME_UP &kp C_VOLUME_DOWN &kp K_MUTE &none &none &trans
                     	     &trans &trans &trans                                               &trans &trans &trans
                         >;
                 };
