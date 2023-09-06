@@ -304,7 +304,7 @@
                         label = "tdAltDel";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp RALT>, <&kp DEL>;
+                        bindings = <&kp LALT>, <&kp DEL>;
                 };
 
         };
